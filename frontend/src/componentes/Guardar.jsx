@@ -19,10 +19,10 @@ function encodeFile(file) {
 
 class Guardar extends React.Component {
     state = {
-      modelo: "",
-      talla: "",
-      colorway: "",
-      precio: "",
+      medicamento: "",
+      hora: "",
+      minutos: "",
+      padecimiento: "",
       foto: ""
     };
 
@@ -46,7 +46,7 @@ class Guardar extends React.Component {
     guardar = () => {
         axios.post("http://localhost:8080/api/guardar", this.state)
           .then(function () {
-            alert("Sneaker guardado");
+            alert("Se añadió el medicamento con éxito");
           })
     };
 
@@ -54,29 +54,29 @@ class Guardar extends React.Component {
         return (
             <Stack sx={{ padding: "1rem", border: "1px solid silver", borderRadius: "15px" }} spacing={2}>
                 <TextField
-                    label="Modelo"
-                    name="modelo"
+                    label="Medicamento"
+                    name="medicamento"
                     type="text"
                     onChange={this.actualizarFormulario}
                 />
 
                 <TextField
-                    label="Talla"
-                    name="talla"
+                    label="Padecimiento"
+                    name="padecimiento"
                     type="text"
                     onChange={this.actualizarFormulario}
                 />
 
                 <TextField
-                    label="Colorway"
-                    name="colorway"
-                    type="text"
+                    label="Hora"
+                    name="hora"
+                    type="number"
                     onChange={this.actualizarFormulario}
                 />
 
                 <TextField
-                    label="Precio"
-                    name="precio"
+                    label="Minutos"
+                    name="minutos"
                     type="number"
                     onChange={this.actualizarFormulario}
                 />

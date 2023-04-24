@@ -18,7 +18,7 @@ class Registrarse extends React.Component {
 
     registrarse = () => {
         axios.post("http://localhost:8080/api/registrarse", this.state)
-          .then(() => alert("Te has registrado"))
+          .then(() => alert("Éxito"))
     }
 
     render() {
@@ -42,7 +42,7 @@ class Registrarse extends React.Component {
                     variant="contained"
                     onClick={this.registrarse}
                 >
-                  Registrarse
+                  Registrate
                 </Button>
             </Stack>
         );

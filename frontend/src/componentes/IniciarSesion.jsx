@@ -21,9 +21,9 @@ class IniciarSesion extends React.Component {
             .then(function (datos) {
               console.log(datos);
               if (datos.data !== null) {
-                alert("Has iniciado sesión");
+                alert("Se inició sesión con éxito");
               } else {
-                alert("Datos incorrectos");
+                alert("Los datos que ingresaste son inválidos");
               }
             });
     }
@@ -49,7 +49,7 @@ class IniciarSesion extends React.Component {
                     variant="contained"
                     onClick={this.iniciarSesion}
                 >
-                  Iniciar Sesión
+                  Inicia sesión
                 </Button>
             </Stack>
         );
